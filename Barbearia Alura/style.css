@@ -1,58 +1,157 @@
-body {
-
-}
-
-#banner {
-    width: 100%;
-
-}
-
-.principal{
-    background: #CCCCCC;
-    padding: 30px;
-}
-
-h1 {
-    text-align: center;
-
-}
-
-p {
-    text-align: center;
-
-}
-
-#missao {
-    font-size: 20px;
-    text-align: center;
-}
-
-
-em strong {
-    color: red;
-}
-
-.itens{
-    font-style: italic;
-}
-
-.beneficios{
-    background: #FFFFFF;
+header {
+    background: #BBBBBB;
     padding: 20px;
 }
 
-h2 {
+.caixa {
+    position: relative;/*Posicionamento relevante*/
+    width: 940px;/*Largura padrão que utilizamos na web*/
+    margin: 0 auto; /*Deixando automatico a caixa*/
+}
+
+nav {
+    position: absolute; /*Responsavel por deixar mover o elemento para onde quiser na página*/
+    top: 110px;
+    right: 0;
+}
+
+nav li{    
+    display: inline;/*dizendo que quero os incones em linha*/
+    margin: 0 0 0 15px; /*lembrando que o css você trabanha sentido horario, primeiro top, right, bottom e left*/
+
+}
+
+nav a{
+    text-transform: uppercase; /*Maiusculo*/
+    color: #000000; /*cor da fonte*/
+    font-weight: bold; /*deixar negrito*/
+    font-size: 22px; /*tamanho da fonte*/
+    text-decoration: none;/*tira a decoração ex: sublinhado*/
+}
+
+nav a:hover { /*Decoração dos links*/
+    color: #C78C19;
+    text-decoration: underline;
+} 
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0; /*De cinquenta para cima e para baixo e zero para os lados */
+}
+
+.produtos li{
+    display: inline-block; /*display alinhado em bloco: O tamanho pode ser ajustado, tanto na largura, quanto na altura.*/
+    text-align: center;/*Alinhamento do texto*/
+    width: 30%;/*Largura dos elementos*/
+    vertical-align: top; /*itens carregados para linha de cima*/
+    margin: 0 1.5%; /*Espaçamento externo*/
+    padding: 30px 20px;
+    box-sizing: border-box; /*Ajustando as bordas das caixas*/
+    border: 2px solid #000000; /*O tamanho da borda, o tipo dela e a cor*/
+    border-radius: 10px;
+}
+
+.produtos li:hover{ /*Efeito de passa o mouse em cima*/
+    border-color: #C78C19;
+
+}
+
+.produtos li:active{/*Efeito de clicar*/
+    border-color: #088C19;
+}
+
+.produtos li:hover h2{
+    font-size: 34px;
+}
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bolder; /*fonte negrito*/
+    font-style: italic;
+}
+
+.produto-descricao {
+    font-size: 18px;
+
+}
+
+.produto-preco {
+    font-size: 22px;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+footer {
     text-align: center;
+    background: url("bg.jpg");/*Colando uma imagem com CSS*/
+    padding: 40px 0;
 }
 
-ul {
-    display: inline-block;
-    vertical-align: top;
-    width: 40%;
-    margin-right: 15%;
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin-top: 20px;
+    
 }
 
-.imagembeneficios { 
+main {
+    width: 940px;
+    margin: 0 auto;
+}
+
+form {
+    margin: 40px 0;
+
+}
+
+form label, form legend {
+    display: block;
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 0 0 10px;
+}
+
+.input-padrao {
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
     width: 50%;
+}
 
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%  ;
+    padding: 15px 0; /*15px para top e bottom, 0 right e left*/
+    background: orange;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.enviar:hover{
+    background: darkorange;
+    transform: scale(1.2); /*rotate(70deg) posiciona meu elemento na quantidade de graus  / scale tranforma em 20% meu elemento*/
+}
+
+table {
+    margin: 20px 0 40px;
+}
+
+thead {
+    background: #555555;
+    color: #FFFFFF;
+    font-weight: bold;
+} 
+
+td, th {
+    border: 1px solid black;
+    padding:8px 15px ; /*espaçamento: top, bottom e right, left */
 }
