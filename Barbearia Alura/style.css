@@ -123,23 +123,29 @@ footer {
 
 }
 
-main {
-    width: 940px;
-    margin: 0 auto;
-}
+main {}
 
 form {
     margin: 40px 0;
 
 }
 
+
 form label,
+form legend {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+/*
 form legend {
     display: block;
     font-size: 20px;
     font-weight: bolder;
     margin: 0 0 10px;
 }
+*/
 
 .input-padrao {
     display: block;
@@ -201,6 +207,36 @@ th {
     font-size: 2em;
     margin: 0 0 1em;
     clear: left;
+    /*text-shadow: 2px 2px #FF0000; 
+    Criando sobra para os titulos*/
+    /*color: rgba(0, 0, 0, 0.3);*/
+    /*Opacidade de elementos usamos rgba(passamos a cor, e a porcentagem)*/
+}
+
+
+/*
+.titulo-principal:first-letter {
+    Primeira letra
+    font-weight: bold;
+
+}
+
+.titulo-principal:before {
+    content: "[";
+}
+
+.titulo-principal:after {
+    content: "]";
+}
+p:first-line {
+    font-style: italic;
+}
+*/
+.principal {
+    padding: 3em 0;
+    background: #FFFFFF;
+    width: 940px;
+    margin: 0 auto;
 }
 
 .principal p {
@@ -224,10 +260,34 @@ th {
     width: 40%;
     display: inline-block;
     vertical-align: top;
+
+}
+
+.itens {
+    /*Espaçamento do testo*/
+    line-height: 1.5;
 }
 
 .imagembeneficios {
     width: 60%;
+    opacity: 1;
+    transition: 400ms;
+    box-shadow: 10px 10px 10px 0 #000000;
+}
+
+.imagembeneficios:hover {
+    opacity: 0.3;
+}
+
+.itens:first-child {
+    /*firs-child: seleciono o primeiro elemento 
+    nth-child(): passo qual elemento eu quero mudar, ainda 2n seleciono os pares
+    */
+    font-weight: bold;
+}
+
+.itens:before {
+    content: "★";
 }
 
 .utensilios {
@@ -239,6 +299,17 @@ th {
 
 .mapa {
     padding: 3em 0;
+    background: linear-gradient(#FEFEFE, #888888);
+    /*Trabalhando com degrade.
+    Ex: background: linear-gradient(90deg, orange 50%, blue, red);
+        background: linear-gradient(orange 50%, blue, red); -> não possui grau de inclinação.
+    */
+
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
 }
 
 .mapa p {
@@ -246,8 +317,69 @@ th {
     text-align: center;
 }
 
-.video {
-    width: 560px;
-    margin: 1em auto;
+.beneficios {
+    padding: 3em 0;
+    background: #888888;
+    /* box-shadow: inset 0 0 30px #FF0000;*/
 
 }
+
+.video {
+    width: 560px;
+    margin: 2em auto;
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .caixa,
+    .principal,
+    .conteudos-beneficios,
+    .mapa-conteudo,
+    .video {
+        width: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+        text-align: center;
+    }
+
+    .lista-beneficios,
+    .imagembeneficios {
+        width: 100%;
+    }
+
+}
+
+
+/*
+main>p {
+    Pegando e colorindo o primeiro paragrafo.
+    background: red;
+}
+
+img+p {
+    selecionado um paragrago logo depois da imagem
+    background: blue;
+}
+
+img~p {
+    selecionar todos os paragrafos
+    background: yellow;
+}
+
+.principal p:not(#missao) {
+    selecionar os paragrafos que não forem missao
+    background: orange;
+}
+
+calcular 
+.utensilios {
+    width:calc(40% - (26px * 4));
+}
+*/
